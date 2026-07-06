@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Pickle to Joblib Converter – Free Online Tool / Compress .pickle Files Instantly</title>
+    <meta name="description" content="Convert .pickle and .pck files to compressed .joblib format online for free. Reduce file sizes by up to 80%. Supports custom Python classes. No signup required.">
+    <meta name="keywords" content="pickle to joblib, convert pickle to joblib online, compress pickle file, joblib converter, python pickle compressor, pck to joblib, reduce pickle file size, joblib compression tool, python serialization converter">
+    <meta name="author" content="aurumz-rgb">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://pickle-to-joblib.streamlit.app/">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pickle to Joblib Converter – Free Online Tool">
+    <meta property="og:description" content="Convert .pickle and .pck files to compressed .joblib format. Reduce file sizes by up to 80%. Free, no signup.">
+    <meta property="og:image" content="assets/pickle-to-joblib.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Pickle to Joblib Converter tool — upload pickle files and download compressed joblib output">
+    <meta property="og:url" content="https://pickle-to-joblib.github.io>
+    <meta property="og:site_name" content="Pickle to Joblib Converter">
+    <meta property="og:url" content="https://pickle-to-joblib.streamlit.app/">
+    <meta property="og:site_name" content="Pickle to Joblib Converter">
+    <meta property="og:locale" content="en_US">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pickle to Joblib Converter – Free Online Tool">
+    <meta name="twitter:description" content="Convert .pickle and .pck files to compressed .joblib format. Reduce file sizes by up to 80%.">
+    <meta name="twitter:image" content="assets/pickle-to-joblib-convertor.png">
+    <meta name="twitter:image:alt" content="Pickle to Joblib file conversion workflow showing upload, compress, and download steps">
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Pickle to Joblib Converter",
+        "description": "Free online tool to convert Python .pickle and .pck files to compressed .joblib format with automatic size reduction. Supports custom Python class dependencies.",
+        "url": "https://pickle-to-joblib.streamlit.app/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript and a modern web browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "screenshot": "assets/pickle-to-joblib.png",
+        "image": "assets/pickle-to-joblib-convertor.png",
+        "author": {
+            "@type": "Person",
+            "name": "aurumz-rgb",
+            "url": "https://github.com/RCT-Reviewer"
+        },
+        "license": "https://spdx.org/licenses/AGPL-3.0-only.html",
+        "featureList": [
+            "Convert .pickle files to .joblib format",
+            "Convert .pck files to .joblib format",
+            "Automatic compression with up to 80% size reduction",
+            "Support for custom Python class dependencies",
+            "Batch file conversion",
+            "Instant download of converted files",
+            "No account or signup required"
+        ],
+        "isAccessibleForFree": true
+    }
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "pickle-to-joblib",
+        "description": "Python tool to convert pickle serialized files to joblib compressed format, built with Streamlit.",
+        "url": "https://github.com/RCT-Reviewer/pickle-to-joblib",
+        "codeRepository": "https://github.com/RCT-Reviewer/pickle-to-joblib",
+        "programmingLanguage": "Python",
+        "license": "https://spdx.org/licenses/AGPL-3.0-only.html",
+        "author": {
+            "@type": "Person",
+            "name": "aurumz-rgb",
+            "url": "https://github.com/RCT-Reviewer"
+        }
+    }
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://pickle-to-joblib.github.io"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Pickle to Joblib Converter",
+                "item": "https://pickle-to-joblib.streamlit.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Source Code",
+                "item": "https://github.com/RCT-Reviewer/pickle-to-joblib"
+            }
+        ]
+    }
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between pickle and joblib?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Joblib is a replacement for pickle that is significantly more efficient on objects containing large NumPy arrays. It also provides built-in compression, reducing file sizes by 30 to 80 percent compared to plain pickle serialization."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much size reduction can I expect when converting pickle to joblib?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Size reduction depends on your file contents. Files with large NumPy arrays typically see 30 to 80 percent reduction at compression level 3. Files with mostly small Python objects see smaller but still meaningful reductions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What file formats does the Pickle to Joblib Converter support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The tool accepts .pickle and .pck files as input and outputs compressed .joblib files that can be loaded with joblib.load()."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I fix 'No module named X' errors during conversion?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If your pickle file was created from a class defined in a custom module, upload the corresponding .py file in the Custom Dependencies section of the tool before converting. The tool will load it so the object deserializes correctly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the Pickle to Joblib Converter free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the tool is completely free and open source under the AGPL-3.0 license. No signup or account is required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data safe when using this tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "All processing happens in-memory on Streamlit's infrastructure. Temporary files are created only during conversion and are immediately deleted. No uploaded data is stored, logged, or shared."
+                }
+            }
+        ]
+    }
+    </script>
+
+
+    <link rel="preload" as="image" href="assets/pickle-to-joblib.png" fetchpriority="high">
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <div class="app-container">
+
+
+        <header class="app-header">
+            <figure class="banner-figure banner-figure--hero">
+                <img
+                    src="assets/pickle-to-joblib.png"
+                    alt="Pickle to Joblib Converter — free online tool for compressing Python pickle files into smaller joblib format"
+                    title="Pickle to Joblib Converter"
+                    width="730"
+                    height="340"
+                    class="banner-image"
+                    fetchpriority="high"
+                >
+            </figure>
+
+
+            <p class="app-description">
+                Upload your <code>.pickle</code> or <code>.pck</code> files and get compressed <code>.joblib</code> files back — instantly.
+                Supports custom Python class dependencies. No signup, no install, completely free.
+            </p>
+
+
+            <div class="cta-group">
+                <a href="https://pickle-to-joblib.streamlit.app/" class="cta-btn cta-btn--primary" rel="noopener" target="_blank">
+                    <svg class="cta-btn__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <path d="M9 2L2 7v8a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1V7L9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    Launch App
+                </a>
+                <a href="https://github.com/RCT-Reviewer/pickle-to-joblib" class="cta-btn cta-btn--secondary" rel="noopener" target="_blank">
+                    <svg class="cta-btn__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9c0 3.32 2.15 6.13 5.14 7.12.37.07.51-.16.51-.36v-1.26c-2.09.45-2.53-1.01-2.53-1.01-.34-.87-.84-1.1-.84-1.1-.69-.47.05-.46.05-.46.76.05 1.16.78 1.16.78.68 1.16 1.78.83 2.21.63.07-.49.26-.83.48-1.02-1.69-.19-3.47-.85-3.47-3.77 0-.83.3-1.51.79-2.04-.08-.19-.34-.97.07-2.03 0 0 .64-.21 2.11.79a7.28 7.28 0 013.84 0c1.47-1 2.11-.79 2.11-.79.42 1.06.15 1.84.08 2.03.49.53.79 1.21.79 2.04 0 2.93-1.78 3.58-3.48 3.77.27.24.52.7.52 1.42v2.1c0 .2.13.43.51.36A7.5 7.5 0 0016.5 9c0-4.14-3.36-7.5-7.5-7.5z" fill="currentColor"/>
+                    </svg>
+                    View Source
+                </a>
+            </div>
+        </header>
+
+
+        <main id="main">
+
+   
+            <section id="how-it-works" aria-labelledby="how-heading">
+                <h2 id="how-heading" class="section-heading">How It Works</h2>
+                <ol class="steps-list">
+                    <li class="step-item">
+                        <span class="step-item__number" aria-hidden="true">1</span>
+                        <div class="step-item__content">
+                            <h3 class="step-item__title">Upload your pickle file</h3>
+                            <p class="step-item__text">Drag and drop or browse to select your <code>.pickle</code> or <code>.pck</code> files. Upload multiple files at once for batch conversion.</p>
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <span class="step-item__number" aria-hidden="true">2</span>
+                        <div class="step-item__content">
+                            <h3 class="step-item__title">Load dependencies (if needed)</h3>
+                            <p class="step-item__text">If your pickle was created from a custom class, upload the <code>.py</code> module file in the dependencies section before converting.</p>
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <span class="step-item__number" aria-hidden="true">3</span>
+                        <div class="step-item__content">
+                            <h3 class="step-item__title">Download compressed joblib</h3>
+                            <p class="step-item__text">The tool re-serializes your data with joblib compression level 3 and shows the size reduction. Download the <code>.joblib</code> file instantly.</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <hr class="divider" role="separator">
+
+
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading" class="section-heading">Why Convert Pickle to Joblib?</h2>
+
+                <figure class="banner-figure banner-figure--secondary">
+                    <img
+                        src="assets/pickle-to-joblib-convertor.png"
+                        alt="Pickle to Joblib convertor workflow showing the step-by-step file conversion process from pickle serialization to compressed joblib format"
+                        title="Pickle to Joblib Convertor Workflow"
+                        width="730"
+                        height="400"
+                        class="banner-image"
+                        loading="lazy"
+                    >
+                    <figcaption class="banner-caption">The conversion pipeline — upload, compress, download.</figcaption>
+                </figure>
+
+                <div class="benefits-grid">
+                    <article class="benefit-card">
+                        <h3 class="benefit-card__title">Smaller Files</h3>
+                        <p class="benefit-card__text">Joblib's compression typically reduces file sizes by <strong>30–80%</strong>, especially for NumPy-heavy objects. Less disk space, faster transfers.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <h3 class="benefit-card__title">Faster Loading</h3>
+                        <p class="benefit-card__text">Joblib uses memory-mapped loading for large NumPy arrays, meaning <code>joblib.load()</code> can be significantly faster than <code>pickle.load()</code>.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <h3 class="benefit-card__title">Drop-in Replacement</h3>
+                        <p class="benefit-card__text">Switching is trivial — just replace <code>pickle.load()</code> with <code>joblib.load()</code> and <code>pickle.dump()</code> with <code>joblib.dump()</code>. Same API, better results.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <h3 class="benefit-card__title">Custom Class Support</h3>
+                        <p class="benefit-card__text">Got pickles made from custom classes like <code>rationale_CNN</code>? Upload the <code>.py</code> source and the tool handles the rest automatically.</p>
+                    </article>
+                </div>
+            </section>
+
+            <hr class="divider" role="separator">
+
+
+            <section id="quick-start" aria-labelledby="qs-heading">
+                <h2 id="qs-heading" class="section-heading">Using the Output</h2>
+                <p class="qs-intro">After downloading your <code>.joblib</code> file, load it in Python:</p>
+                <div class="code-block">
+                    <pre><code>import joblib
+
+# Load your converted file
+model = joblib.load("your_model.joblib")
+
+# That's it, use it exactly like a pickle!
+result = model.predict(data)</code></pre>
+                </div>
+                <p class="qs-note">Install joblib if you don't have it: <code>pip install joblib</code></p>
+            </section>
+
+            <hr class="divider" role="separator">
+
+          
+            <section id="faq" aria-labelledby="faq-heading">
+                <h2 id="faq-heading" class="section-heading">Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary class="faq-item__question">What is the difference between pickle and joblib?</summary>
+                        <div class="faq-item__answer">
+                            <p>Joblib is a replacement for pickle that is significantly more efficient on objects containing large NumPy arrays. It also provides built-in compression, reducing file sizes by 30–80% compared to plain pickle serialization. The resulting <code>.joblib</code> files can be loaded with <code>joblib.load()</code> just like you'd use <code>pickle.load()</code>.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">How much size reduction can I expect?</summary>
+                        <div class="faq-item__answer">
+                            <p>Size reduction depends on your file contents. Files with large NumPy arrays typically see <strong>30–80%</strong> reduction at compression level 3. Files with mostly small Python objects will see smaller but still meaningful reductions.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">What file formats are supported?</summary>
+                        <div class="faq-item__answer">
+                            <p>The tool accepts <code>.pickle</code> and <code>.pck</code> files as input. Output is always a compressed <code>.joblib</code> file that can be loaded with <code>joblib.load('your_file.joblib')</code>.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">How do I fix "No module named X" errors?</summary>
+                        <div class="faq-item__answer">
+                            <p>If your pickle file was created from a class defined in a custom Python module, upload the corresponding <code>.py</code> file in the <strong>Custom Dependencies</strong> section before converting. The tool will load it so the object deserializes correctly.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Is the Pickle to Joblib Converter free?</summary>
+                        <div class="faq-item__answer">
+                            <p>Yes, the tool is completely free and open source under the <a href="https://spdx.org/licenses/AGPL-3.0-only.html" target="_blank" rel="noopener">AGPL-3.0 license</a>. No signup or account is required. You can also <a href="https://github.com/RCT-Reviewer/pickle-to-joblib" target="_blank" rel="noopener">self-host it</a> from the GitHub repository.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Is my data safe?</summary>
+                        <div class="faq-item__answer">
+                            <p>All processing happens in-memory. Temporary files are created only during conversion and are immediately deleted afterward. No uploaded data is stored, logged, or shared with any third party.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Can I run this locally or self-host it?</summary>
+                        <div class="faq-item__answer">
+                            <p>Absolutely. The source code is available on <a href="https://github.com/RCT-Reviewer/pickle-to-joblib" target="_blank" rel="noopener">GitHub</a>. Clone the repo, install the dependencies, and run it with Streamlit. Since all processing is local, your data never leaves your machine.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">What compression level does the tool use?</summary>
+                        <div class="faq-item__answer">
+                            <p>The tool uses joblib's compression level 3 (out of 0–9), which provides a strong balance between compression ratio and speed. Higher levels would give slightly smaller files but take noticeably longer to process.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+
+
+
+        </main>
+
+
+        <footer class="app-footer">
+            <nav class="footer-links" aria-label="Footer navigation">
+               
+                <a href="https://github.com/RCT-Reviewer/pickle-to-joblib" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://spdx.org/licenses/AGPL-3.0-only.html" target="_blank" rel="noopener">AGPL-3.0 License</a>
+            </nav>
+            <p>&copy; aurumz-rgb 2026</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
