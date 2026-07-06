@@ -542,3 +542,17 @@ img {
         color: #333;
     }
 }
+
+
+.badge-row {
+    display: flex;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.25rem;
+}
+
+.badge-row img {
+    height: 20px;
+    width: auto;
+    border-radius: 3px;
+}
