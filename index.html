@@ -807,6 +807,69 @@ python -m streamlit run rct_reviewer/app2.py</code></pre>
             <hr class="divider" role="separator">
 
 
+            <section id="validation" aria-labelledby="val-heading">
+                <h2 id="val-heading" class="section-heading">Validation</h2>
+                <p class="qs-intro">RCT-Reviewer has been validated in a dedicated <a
+                        href="https://github.com/RCT-Reviewer/Validation" target="_blank" rel="noopener">validation
+                        suite</a> that runs the original 2017 RobotReviewer and the refactored tool side by side and
+                    checks them against human reference standards. In short:</p>
+                <ol class="steps-list">
+                    <li class="step-item">
+                        <span class="step-item__number" aria-hidden="true">A</span>
+                        <div class="step-item__content">
+                            <h3 class="step-item__title">Predictive validity</h3>
+                            <p class="step-item__text">On the Clinical Hedges benchmark (n = 751), the refactored RCT
+                                classifier reproduces the original code <strong>bit-for-bit</strong> (max score
+                                difference 0.0) and scores <strong>sensitivity 94.1%</strong>,
+                                <strong>specificity 88.1%</strong>, F1 0.925, kappa 0.826 against human labels.</p>
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <span class="step-item__number" aria-hidden="true">B</span>
+                        <div class="step-item__content">
+                            <h3 class="step-item__title">CNN ablation</h3>
+                            <p class="step-item__text">The cost of dropping the unmaintainable TensorFlow CNN is
+                                quantified: SVM-only F1 0.925 vs 0.969 for the original full ensemble (McNemar
+                                p &lt; 0.0001) — most of the gap comes from publication-type features, not the CNN.</p>
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <span class="step-item__number" aria-hidden="true">C</span>
+                        <div class="step-item__content">
+                            <h3 class="step-item__title">Risk-of-Bias fidelity</h3>
+                            <p class="step-item__text"><strong>6,018/6,018</strong> RoB judgements are identical to the
+                                original 2017 implementation (kappa 1.0), with byte-identical vectorizer outputs —
+                                published RoB accuracy therefore transfers by weight identity.</p>
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <span class="step-item__number" aria-hidden="true">D</span>
+                        <div class="step-item__content">
+                            <h3 class="step-item__title">Parser robustness</h3>
+                            <p class="step-item__text">All <strong>1,000/1,000</strong> corpus PDFs parsed successfully
+                                (median 1.66 s/PDF, scaling linearly with document length).</p>
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <span class="step-item__number" aria-hidden="true">E</span>
+                        <div class="step-item__content">
+                            <h3 class="step-item__title">External human validation</h3>
+                            <p class="step-item__text">On the open-access subset of the Tian 2024 human reference
+                                standard (n = 313), agreement with human reviewers is within the range published for
+                                the original tool — and the original and refactored implementations agree on
+                                <strong>100% of judgements</strong> when given identical text.</p>
+                        </div>
+                    </li>
+                </ol>
+                <p class="qs-note">This is only a summary. For the full methodology, per-tier statistics, figures, and
+                    step-by-step reproduction instructions, please view the <a
+                        href="https://github.com/RCT-Reviewer/Validation#readme" target="_blank"
+                        rel="noopener">README of the Validation repository</a>.</p>
+            </section>
+
+            <hr class="divider" role="separator">
+
+
             <section id="file-structure" aria-labelledby="fs-heading">
                 <h2 id="fs-heading" class="section-heading">Project File Structure</h2>
                 <div class="code-block">
@@ -1109,6 +1172,8 @@ of the Association for Computational Linguistics (ACL).
                     GitHub Repository</a>
                 <a href="https://github.com/RCT-Reviewer/RCT-Reviewer-Online" target="_blank" rel="noopener">Online
                     Repository</a>
+                <a href="https://github.com/RCT-Reviewer/Validation" target="_blank" rel="noopener">Validation
+                    Suite</a>
                 <a href="https://huggingface.co/Aurumz/RCT-Reviewer" target="_blank" rel="noopener">HF Models
                     (.joblib)</a>
                 <a href="https://huggingface.co/Aurumz/RCT-Reviewer-pickle" target="_blank" rel="noopener">HF Models
