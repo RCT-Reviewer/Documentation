@@ -262,7 +262,7 @@
                 "name": "Why was the CNN model removed in favor of an SVM-only pipeline?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "CNN models were removed because they depend on TensorFlow/Keras .h5 files which break on Python 3.11 and 3.12. The Linear SVM model already contains the full predictive signal with negligible accuracy loss of 0 to 2 percent, is faster, and ensures reproducibility across all systems."
+                    "text": "CNN models were removed because they depend on TensorFlow 1.x/Keras .h5 files that cannot run in a maintained environment. The Linear SVM model preserves the core predictive signal with a measured 4.4% F1 drop (0.925 vs 0.969, Tier B), is faster, and ensures reproducibility across all systems."
                 }
             },
             {
@@ -582,8 +582,8 @@
                    loads pre-trained .npz weights
 
 # SVM-Only Pipeline:
-# CNN models removed due to TensorFlow compatibility issues
-# on Python 3.11-3.12. Not required for accurate predictions.</code></pre>
+# CNN models removed due to dead TensorFlow 1.x dependencies.
+# Results in a measured 4.4% F1 drop (validated in Tier B).</code></pre>
                 </div>
                 <p class="qs-note">Model Redistribution Note: This repository contains joblib-converted model artifacts
                     originally developed in RobotReviewer. The old pickle model files were compressed and redistributed
@@ -710,13 +710,13 @@ python -m streamlit run rct_reviewer/app2.py</code></pre>
                             <tr>
                                 <td
                                     style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-light); color: var(--text); font-weight: 600;">
-                                    Expected Accuracy Difference After CNN Removal</td>
+                                    Measured Accuracy Difference After CNN Removal</td>
                                 <td
                                     style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-light); color: var(--text-muted);">
-                                    Baseline reference</td>
+                                    Baseline reference (Full Ensemble)</td>
                                 <td
                                     style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-light); color: var(--text-muted);">
-                                    Estimated negligible reduction (~0–2%)</td>
+                                    F1 drops 0.969 → 0.925 (Tier B, p &lt; 0.0001)</td>
                             </tr>
                             <tr>
                                 <td
@@ -749,7 +749,7 @@ python -m streamlit run rct_reviewer/app2.py</code></pre>
                                     ~71.0% agreement accuracy vs expert consensus</td>
                                 <td
                                     style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-light); color: var(--text-muted);">
-                                    Same expected predictive accuracy because the same SVM weights are used</td>
+                                    Identical SVM weights (verified Tier C); 60–76% human concordance (Tier E)</td>
                             </tr>
                             <tr>
                                 <td
@@ -798,10 +798,9 @@ python -m streamlit run rct_reviewer/app2.py</code></pre>
 
                 <h3 class="step-item__title" style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Note on SVM vs CNN</h3>
                 <p class="step-item__text">This project uses a <strong>Linear SVM-only pipeline</strong> instead of the
-                    original SVM + CNN ensemble. CNN models were removed because they depend on TensorFlow/Keras
-                    <code>.h5</code> files which break on Python 3.11–3.12. The SVM model already contains the full
-                    predictive signal with negligible accuracy loss (~0–2%), is faster, and ensures reproducibility
-                    across all systems.</p>
+                    original SVM + CNN ensemble. CNN models were removed because they depend on TensorFlow 1.x/Keras
+                    <code>.h5</code> files that cannot run in a maintained environment. The SVM model preserves the core predictive signal with a
+                    measured 4.4% F1 drop (0.925 vs 0.969, Tier B), is faster, and ensures reproducibility across all systems.</p>
             </section>
 
             <hr class="divider" role="separator">
@@ -809,9 +808,8 @@ python -m streamlit run rct_reviewer/app2.py</code></pre>
 
             <section id="validation" aria-labelledby="val-heading">
                 <h2 id="val-heading" class="section-heading">Validation</h2>
-                <p class="qs-intro">RCT-Reviewer has been validated in a dedicated <a
-                        href="https://github.com/RCT-Reviewer/Validation" target="_blank" rel="noopener">validation
-                        suite</a> that runs the original 2017 RobotReviewer and the refactored tool side by side and
+                <p class="qs-intro">RCT-Reviewer has been independently validated against the original 2017 RobotReviewer implementation using a dedicated <a
+                        href="https://github.com/RCT-Reviewer/Validation" target="_blank" rel="noopener">five-tier validation harness</a> that runs both tools side by side and
                     checks them against human reference standards. In short:</p>
                 <ol class="steps-list">
                     <li class="step-item">
@@ -847,7 +845,7 @@ python -m streamlit run rct_reviewer/app2.py</code></pre>
                         <div class="step-item__content">
                             <h3 class="step-item__title">Parser robustness</h3>
                             <p class="step-item__text">All <strong>1,000/1,000</strong> corpus PDFs parsed successfully
-                                (median 1.66 s/PDF, scaling linearly with document length).</p>
+                                (median 1.57 s/PDF, scaling linearly with document length).</p>
                         </div>
                     </li>
                     <li class="step-item">
@@ -1029,9 +1027,9 @@ python -m streamlit run rct_reviewer/app2.py</code></pre>
                         <summary class="faq-item__question">Why was the CNN model removed in favor of an SVM-only
                             pipeline?</summary>
                         <div class="faq-item__answer">
-                            <p>CNN models were removed because they depend on TensorFlow/Keras <code>.h5</code> files
-                                which break on Python 3.11 and 3.12. The Linear SVM model already contains the full
-                                predictive signal with negligible accuracy loss of 0 to 2 percent, is faster, and
+                            <p>CNN models were removed because they depend on TensorFlow 1.x/Keras <code>.h5</code> files
+                                that cannot run in a maintained environment. The Linear SVM model preserves the core predictive signal with a
+                                measured 4.4% F1 drop (0.925 vs 0.969, Tier B), is faster, and
                                 ensures reproducibility across all systems.</p>
                         </div>
                     </details>
